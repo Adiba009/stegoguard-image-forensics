@@ -1,0 +1,10 @@
+Student Name: Adiba
+Project: StegoGuard Image Forensics
+
+In this assignment, I used StegoGuard and GitHub Actions to detect suspicious hidden data inside PNG images. I changed the lab mode between clean and suspicious to test the scanner. The clean image passed the scan, while the suspicious image failed because the scanner detected extra data after the PNG ending marker and suspicious keywords.
+
+I also modified scanner.py by adding two new suspicious keywords, confidential and private_data. I modified make_demo_image.py to generate hidden messages containing these keywords and tested the updated detection rules using GitHub Actions. I also customised the hidden message to demonstrate that the scanner could detect keywords even when the surrounding text changed.
+
+The failed scans indicated successful detection of suspicious data, while the passed scans indicated that no suspicious data was detected by the implemented rules.
+
+Through this assignment, I learned how automated security scanning works, how hidden information can be stored inside image files, and how custom detection rules can improve cybersecurity monitoring.
