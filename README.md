@@ -64,3 +64,63 @@ Submit the link to your fork and the five workflow-run links below with the rele
 In two or three sentences, explain why both keyword-test runs failed and identify the log evidence that shows your new rule worked.
 
 **Optional.** Describe one situation where a legitimate image could match a configured keyword. Explain what evidence you would check before treating it as suspicious.
+
+
+---
+
+## Student Implementation and Improvements
+
+### Project Overview
+
+StegoGuard is an automated image security scanner that detects suspicious hidden data inside PNG images using Python and GitHub Actions.
+
+### My Modifications
+
+- Added a new suspicious keyword: `confidential`.
+- Added an additional suspicious keyword: `private_data`.
+- Customised the suspicious hidden message.
+- Created `student_note.txt` to document my work and learning outcomes.
+- Renamed the GitHub Actions workflow to **StegoGuard - Automated Image Security Scanner**.
+- Improved the README formatting and documentation.
+
+### Project Files
+
+| File | Purpose |
+| --- | --- |
+| `scanner.py` | Detects suspicious data inside images. |
+| `make_demo_image.py` | Generates clean or suspicious PNG images. |
+| `lab_mode.txt` | Controls which type of image is generated. |
+| `stegoguard.yml` | Configures the automated GitHub Actions workflow. |
+| `student_note.txt` | Documents my work and learning outcomes. |
+| `README.md` | Provides project documentation. |
+
+### How the System Works
+
+1. The student modifies `lab_mode.txt`.
+2. GitHub Actions automatically starts the workflow.
+3. Python generates a demo PNG image.
+4. StegoGuard scans the generated image.
+5. The workflow passes or fails based on the detection results.
+
+### Testing and Expected Results
+
+| Test | Expected Result |
+| --- | --- |
+| Initial clean image | Passed |
+| Suspicious image | Failed |
+| Image restored to clean mode | Passed |
+| Confidential keyword detection | Failed |
+| Private_data keyword detection | Failed |
+| Final clean image | Passed |
+
+### Interpretation of Results
+
+A failed scan indicates that the scanner detected suspicious data in the generated image. A passed scan indicates that no suspicious data was detected by the implemented detection rules.
+
+### Learning Outcomes
+
+Through this assignment, I learned how automated security scanning works, how hidden information can be stored inside image files, and how custom detection rules can improve cybersecurity monitoring. I also gained practical experience with GitHub Actions, Python scripts, workflow configuration and project documentation.
+
+### Conclusion
+
+StegoGuard demonstrates how automated security tools can detect suspicious information inside digital images. The additional detection rules and documentation improvements demonstrate how an existing security tool can be customised and improved.
